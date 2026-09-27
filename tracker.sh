@@ -2,7 +2,7 @@
 
 disk_space=$(df -h / | awk 'NR==2 {print$5}'| sed 's/%//')
 current_date=$(date)
-echo $disk_space $current_date  >> report.txt
+echo "Disk_space is : $disk_space, Time is : $current_date"  >> report.txt
 
 git add .
 git commit -m  "Space updated"
